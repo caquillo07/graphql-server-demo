@@ -1,0 +1,23 @@
+type Query {
+    getUsers: [User]!
+
+#    getComments(): [Comment]!
+}
+
+type Mutation {
+    updateUser(name: String!): User!
+}
+
+##########
+# Schema #
+##########
+
+type User {
+    id: ID!
+    name: String!
+}
+
+#type Comment {
+#    id: ID!
+#    text: String!
+#}

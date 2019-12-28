@@ -1,0 +1,23 @@
+# .gqlgen.yml example
+#
+# Refer to https://gqlgen.com/config/
+# for detailed .gqlgen.yml documentation.
+
+schema:
+  - "gql-schemas/*.graphql"
+
+# Let gqlgen know where to put the generated server
+exec:
+  filename: pkg/gqlgen/server/server.gqlgen.go
+  package: server
+
+# Let gqlgen know where to put the generated models (if any)
+model:
+  filename: pkg/gqlgen/schema/schema.gqlgen.go
+  package: schema
+
+# resolved is not used as I create and manage my own.
+#resolver:
+#  filename: pkg/server/resolver.go
+#  type: resolver
+#  package: server
