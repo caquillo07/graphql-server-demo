@@ -4,7 +4,6 @@ import (
 	"time"
 
 	"github.com/gofrs/uuid"
-	"github.com/jinzhu/gorm"
 )
 
 // User represents a user in the database
@@ -26,6 +25,6 @@ type User struct {
 }
 
 // CreateUser creates a new user in the database.
-func CreateUser(db *gorm.DB, user *User) error {
-	return db.Create(user).Error
+func CreateUser(user *User) error {
+	return nil
 }

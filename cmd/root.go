@@ -53,14 +53,3 @@ func initLogging() {
 	logger.Info("GraphQL Server Started")
 	zap.ReplaceGlobals(logger)
 }
-
-func initPrometheus(prometheusAddr string) {
-	// metrics.Register()
-	//
-	// go func() {
-	//     logger := zap.L()
-	//     logger.Info("Starting prometheus listener", zap.String("address", prometheusAddr))
-	//     http.Handle("/metrics", promhttp.Handler())
-	//     logger.Fatal("Prometheus server exited", zap.Error(http.ListenAndServe(prometheusAddr, nil)))
-	// }()
-}

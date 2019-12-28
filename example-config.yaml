@@ -1,21 +1,7 @@
 server:
   port: 8080
 
-cors:
-  enabled: true
-  debug: false
-  allowedOrigins:
-    - http://localhost:8080
-
 graphql:
   playground: true
   logQueries: true
 
-database:
-  enabled: false
-  log: true
-  driver: postgres
-  connectionString: postgresql://user:pass@localhost:5432/database?sslmode=disable
-
-auth:
-  enabled: true

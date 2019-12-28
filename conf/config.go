@@ -5,8 +5,6 @@ import (
 	"strings"
 
 	"github.com/spf13/viper"
-
-	"github.com/caquillo07/graphql-server-demo/database"
 )
 
 // Config contains all of the configurable pieces of the application.
@@ -16,25 +14,10 @@ type Config struct {
 		Port string
 	}
 
-	CORS struct {
-		Enabled        bool
-		Debug          bool
-		AllowedOrigins []string
-	}
-
 	GraphQL struct {
 		Playground bool
 		LogQueries bool
 	}
-
-	Auth struct {
-		// Enabled indicates whether or not the API will require a token
-		// for each request
-		Enabled bool
-	}
-
-	// Config provides database configuration
-	Database database.Config
 }
 
 // LoadConfig loads configuration from the viper instance.
