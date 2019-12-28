@@ -8,9 +8,6 @@ generate: tools
 run-dev:
 	${GORUN_CMD} main.go gql --dev-log --config example-config.yaml
 
-migrate-dev:
-	${GORUN_CMD} main.go migrate --config example-config.yaml --dev-log
-
 tools:
 	cd vendor/github.com/99designs/gqlgen && go build
 
